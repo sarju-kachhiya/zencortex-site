@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <title>Zencortex-site</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* HEADER */
+.zencortex-header {
+    font-family: "Lato", sans-serif ;
+    background-color: #2e7d73;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* LOGO */
+.logo-text {
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.logo-text .tm {
+    font-size: 16px;
+    vertical-align: super;
+}
+
+/* NAV LINKS */
+.nav-link-custom {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #f4d44d;
+}
+
+/* ORDER BUTTON */
+.order-btn {
+    background: #f4d44d;
+    color: #5a4b00;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* MOBILE MENU */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: url(assets/hero-bg.png); /* soft grey/teal */
+    padding: 60px 0;
+}
+
+/* TITLE */
+.hero-title {
+    font-family: "lato", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+/* SUBTITLE */
+.hero-subtitle {
+    font-size: 22px;
+    color: #4c4c4c;
+    margin-bottom: 40px;
+}
+
+/* BUTTON */
+.hero-btn {
+    background: #f4d44d;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: #5a4b00;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.hero-btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+.hero-image img {
+    max-width: 450px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+
+    .hero-section {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-image {
+        margin-top: 50px;
+    }
+}
+/* TOP SLIDER BAR */
+.top-slider {
+    background: #2e7d73;
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* TRACK */
+.slider-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 20s linear infinite;
+}
+
+/* TEXT STYLE */
+.slider-track span {
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 50px;
+}
+
+.slider-track strong {
+    font-weight: 700;
+}
+
+/* ANIMATION */
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.pointer {
+    cursor: pointer;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    background: #f3f3f3;
+    padding: 90px 0;
+}
+
+.about-wrapper {
+    background: #d7e2e1;
+    border-radius: 30px;
+    padding: 60px;
+}
+
+/* IMAGE */
+.about-image {
+    max-width: 420px;
+}
+
+/* CONTENT */
+.about-title {
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #1c1c1c;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* FEATURES */
+.about-features {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about-features i {
+    color: #1c1c1c;
+    margin-right: 8px;
+}
+
+/* BUTTON */
+.about-btn {
+    background: #f4c400;
+    padding: 16px 45px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+    background: #e6b800;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+
+    .about-wrapper {
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-features {
+        justify-content: center;
+    }
+
+    .about-image {
+        margin-bottom: 40px;
+    }
+}
+/* CERT SECTION */
+.cert-section {
+    background: #f3f3f3;
+    padding: 80px 0;
+}
+
+/* SAME STYLE AS ABOUT WRAPPER */
+.cert-wrapper {
+    background: #d7e2e1;
+    border-radius: 30px;
+    padding: 60px;
+}
+
+/* CARD STYLE */
+.cert-card {
+    background: #d7e2e1;  /* Same as about */
+    border-radius: 20px;
+    padding: 30px 25px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ICON */
+.cert-icon {
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+/* TITLE */
+.cert-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.cert-card p {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .cert-wrapper {
+        padding: 40px 25px;
+    }
+}
+
+.benefits-section{ background:#f3f3f3; padding:80px 0; }
+
+.benefits-title{ font-size:34px; font-weight:700; margin-bottom:10px; }
+.benefits-subtitle{ font-size:16px; color:#555; margin-bottom:45px; }
+
+.benefits-wrapper{
+  position:relative;
+  width:500px;
+  height:500px;
+  margin:auto;
+}
+
+.benefits-svg{
+  position:absolute;
+  inset:0;
+  width:500px;
+  height:500px;
+  z-index:1;
+  opacity:0.9;
+}
+
+.center-image{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:3;
+}
+.center-image img{ width:300px; }
+
+/* Benefit text style */
+.benefit-item{
+  position:absolute;
+  width:170px;
+  z-index:4;
+  text-align:center;
+}
+.benefit-item h5{
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:6px;
+  color:#1c1c1c;
+}
+.benefit-item p{
+  font-size:13px;
+  color:#555;
+  line-height:1.4;
+  margin:0;
+}
+
+/* Positions (match arrow directions) */
+.b1{ top:-10px; left:50%; transform:translateX(-50%); }                 /* top */
+.b2{ top:60px; right:-40px; }                                          /* top-right */
+.b3{ top:50%; right:-55px; transform:translateY(-50%); }               /* right */
+.b4{ bottom:60px; right:-40px; }                                       /* bottom-right */
+.b5{ bottom:-10px; left:50%; transform:translateX(-50%); }             /* bottom */
+.b6{ bottom:60px; left:-40px; }                                        /* bottom-left */
+.b7{ top:50%; left:-55px; transform:translateY(-50%); }                /* left */
+.b8{ top:60px; left:-40px; }                                           /* top-left */
+
+/* Responsive: stack items */
+@media (max-width: 992px){
+  .benefits-wrapper{ width:100%; height:auto; }
+  .benefits-svg{ display:none; }
+  .center-image{ position:static; transform:none; margin:20px 0 30px; }
+  .benefit-item{ position:static; width:100%; max-width:520px; margin:0 auto 18px; }
+}
+
+
+
+</style>
+</head>
+<body>
+
+<header class="zencortex-header">
+    <div class="container-fluid px-4">
+        <nav class="navbar navbar-expand-lg p-0">
+
+            <!-- Logo -->
+            <a class="navbar-brand logo-text" href="#">
+                ZenCortex<span class="tm">™</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-1 text-white"></i>
+            </button>
+
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="d-lg-flex align-items-center gap-5 text-center mt-3 mt-lg-0">
+
+                    <a href="#" class="nav-link-custom">About Us</a>
+                    <a href="#" class="nav-link-custom">Ingredients</a>
+                    <a href="#" class="nav-link-custom">Benefits</a>
+                    <a href="#" class="nav-link-custom">FAQ's</a>
+
+                    <a href="#" class="order-btn mt-3 mt-lg-0">
+                        Order Now
+                        <i class="bi bi-cart3 ms-2"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</header>
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-8 hero-content">
+                <h1 class="hero-title">
+                    Advanced Hearing Support Formula For Clear, Healthy Ears
+                </h1>
+
+                <p class="hero-subtitle">
+                    Scientifically inspired ingredients formulated to support hearing clarity and cognitive performance. A powerful liquid formula designed to support ear health, hearing clarity, and mental focus.
+                </p>
+
+                <a href="#" class="hero-btn">
+                    ORDER NOW
+                </a>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="col-lg-4 text-center hero-image">
+                <img src="assets/zencortex-hero-img.png" alt="Product">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- TOP ANNOUNCEMENT SLIDER -->
+ 
+<div class="top-slider pointer" onclick="location.href='https://www.google.com'">
+    <div class="slider-track">
+        <span>
+            GET ZENCORTEX TODAY! * <strong>NEW SCIENCE BREAKTHROUGH</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+            GET ZENCORTEX TODAY! * <strong>NEW SCIENCE BREAKTHROUGH</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+            GET ZENCORTEX TODAY! * <strong>NEW SCIENCE BREAKTHROUGH</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>
+
+        <!-- Duplicate for seamless loop -->
+        <span>
+            GET ZENCORTEX TODAY! * <strong>NEW SCIENCE BREAKTHROUGH</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+            GET ZENCORTEX TODAY! * <strong>NEW SCIENCE BREAKTHROUGH</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+            GET ZENCORTEX TODAY! * <strong>NEW SCIENCE BREAKTHROUGH</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>
+    </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-wrapper">
+            <div class="row align-items-center">
+
+                <!-- LEFT IMAGE -->
+                <div class="col-lg-5 text-center">
+                    <img src="assets/about-img.webp" 
+                         alt="ZenCortex Product" 
+                         class="img-fluid about-image">
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <div class="col-lg-7 about-content">
+
+    <h2 class="about-title">
+        What is ZenCortex?
+    </h2>
+
+    <p class="about-text">
+        ZenCortex is a liquid dietary supplement created to support healthy hearing 
+        while also promoting mental clarity and cognitive balance. Unlike traditional 
+        pills or capsules, ZenCortex comes in an easy-to-use liquid form that can be 
+        mixed with water, tea, or coffee, making it convenient for daily use. This 
+        delivery method is especially appealing to people who prefer faster absorption 
+        and a simpler wellness routine.
+    </p>
+
+    <p class="about-text">
+        The supplement is designed for individuals who are experiencing challenges such 
+        as occasional ringing in the ears, difficulty focusing, or age-related hearing 
+        concerns. ZenCortex fits into the growing trend of natural, lifestyle-based 
+        health solutions, where people seek long-term support rather than quick fixes. 
+        Instead of masking symptoms, the formula aims to nourish the systems connected 
+        to auditory and brain health.
+    </p>
+
+    <p class="about-text">
+        ZenCortex is made using a blend of more than 20 carefully selected natural 
+        ingredients, including plant extracts, herbs, and minerals known for their 
+        antioxidant and circulation-supporting properties. Ingredients like grape seed 
+        extract, green tea, and Panax ginseng are commonly associated with protecting 
+        cells from oxidative stress and supporting neural communication. These 
+        components are combined to work together, offering a balanced and holistic approach.
+    </p>
+
+    <p class="about-text">
+        Quality and safety are key aspects of the ZenCortex formula. The supplement is 
+        manufactured in the United States in facilities that follow Good Manufacturing 
+        Practices (GMP) and are registered with the FDA. While ZenCortex is not intended 
+        to diagnose, treat, or cure medical conditions, these production standards help 
+        ensure consistency, purity, and reliability in every bottle.
+    </p>
+
+    <p class="about-text">
+        Overall, ZenCortex is positioned as a natural hearing and cognitive support 
+        supplement for people who want to maintain clarity, focus, and auditory wellness 
+        as part of their daily routine. With its liquid format, natural composition, and 
+        consumer-friendly guarantee, ZenCortex offers a supportive option for those 
+        looking to invest in their long-term hearing and mental well-being.
+    </p>
+
+    <!-- FEATURES -->
+    <div class="about-features">
+        <div><i class="bi bi-check-lg"></i> Plant Ingredients</div>
+        <div><i class="bi bi-check-lg"></i> No Stimulants</div>
+        <div><i class="bi bi-check-lg"></i> Non-Habit Forming</div>
+    </div>
+
+    <a href="#" class="about-btn">
+        ORDER NOW
+    </a>
+
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits-section">
+  <div class="container text-center">
+
+    <h2 class="benefits-title">ZenCortex Hearing Support Benefits</h2>
+    <p class="benefits-subtitle">Natural hearing support supplement designed to promote ear health, hearing clarity, and cognitive performance.</p>
+
+    <div class="benefits-wrapper">
+
+      <!-- SVG ARROWS -->
+      <svg class="benefits-svg" viewBox="0 0 500 500">
+        <defs>
+          <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+            <polygon points="0 0, 6 3, 0 6" fill="#2e7d73"></polygon>
+          </marker>
+        </defs>
+
+        <path d="M250 40 Q280 110 250 160" stroke="#2e7d73" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowhead)"/>
+        <path d="M440 120 Q380 170 330 200" stroke="#2e7d73" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowhead)"/>
+        <path d="M460 250 Q380 250 330 250" stroke="#2e7d73" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowhead)"/>
+        <path d="M440 380 Q380 330 330 300" stroke="#2e7d73" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowhead)"/>
+        <path d="M250 460 Q250 380 250 320" stroke="#2e7d73" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowhead)"/>
+        <path d="M60 380 Q120 330 170 300" stroke="#2e7d73" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowhead)"/>
+        <path d="M40 250 Q120 250 170 250" stroke="#2e7d73" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowhead)"/>
+        <path d="M60 120 Q120 170 170 200" stroke="#2e7d73" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#arrowhead)"/>
+      </svg>
+
+      <!-- CENTER IMAGE -->
+      <div class="center-image">
+        <img src="assets/zencortex-benefits.png" alt="ZenCortex">
+      </div>
+
+      <!-- 8 BENEFITS TEXT AROUND -->
+      <div class="benefit-item b1">
+  <h5>Supports Healthy Hearing</h5>
+  <p>
+    Promotes natural hearing support and balanced auditory function.
+  </p>
+</div>
+
+<div class="benefit-item b2">
+  <h5>Improves Focus & Mental Clarity</h5>
+  <p>
+    Supports concentration and cognitive performance.
+  </p>
+</div>
+
+<div class="benefit-item b3">
+  <h5>Boosts Memory Function</h5>
+  <p>
+    Helps maintain memory recall and retention.
+  </p>
+</div>
+
+<div class="benefit-item b4">
+  <h5>Helps Reduce Ear Ringing</h5>
+  <p>
+    Supports inner ear balance and auditory comfort.
+  </p>
+</div>
+
+<div class="benefit-item b5">
+  <h5>Fast-Absorbing Liquid Formula</h5>
+  <p>
+    Liquid hearing support for better absorption.
+  </p>
+</div>
+
+<div class="benefit-item b6">
+  <h5>No Stimulants or Harsh Chemicals</h5>
+  <p>
+    Free from artificial additives and stimulants.
+  </p>
+</div>
+
+<div class="benefit-item b7">
+  <h5>Plant-Based Natural Ingredients</h5>
+  <p>
+    Natural ingredients for ear health support.
+  </p>
+</div>
+
+<div class="benefit-item b8">
+  <h5>Made in the USA (GMP-Certified)</h5>
+  <p>
+    Manufactured in GMP-certified, FDA-registered facilities.
+  </p>
+</div>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CERTIFICATION SECTION -->
+<section class="cert-section">
+    <div class="container">
+        <div class="row g-4 text-center">
+
+            <!-- CARD 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="cert-card">
+                    <img src="assets/usa-1.webp" alt="Made in USA" class="cert-icon">
+                    <h4>Developed and Manufactured in the USA</h4>
+<p>
+    ZenCortex hearing support supplement is carefully formulated and manufactured in the United States under strict quality control standards to help support healthy hearing and overall ear wellness.
+</p>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="cert-card">
+                    <img src="assets/natural-1.webp" alt="Natural Formula" class="cert-icon">
+                    <h4>100% Natural Hearing Support Formula</h4>
+<p>
+    ZenCortex features a natural, plant-based hearing support formula made with carefully selected ingredients known for promoting ear health and hearing clarity—without harsh chemicals, stimulants, or habit-forming substances.
+</p>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="cert-card">
+                    <img src="assets/gmp-1.webp" alt="GMP Certified" class="cert-icon">
+                    <h4>GMP-Certified Quality Manufacturing</h4>
+<p>
+    Each bottle of ZenCortex is produced in GMP-certified facilities that follow Good Manufacturing Practices, ensuring purity, consistency, and high-quality standards for every batch.
+</p>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="cert-card">
+                    <img src="assets/fda-1.webp" alt="FDA Registered" class="cert-icon">
+                    <h4>Manufactured in FDA-Registered Facilities</h4>
+<p>
+    ZenCortex is manufactured in FDA-registered facilities that operate under regulated guidelines to maintain cleanliness, safety, and strict quality control throughout the production process.
+</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Dummy content to test sticky -->
+<div style="height:2000px; background:#f5f5f5;"></div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
