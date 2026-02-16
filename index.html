@@ -877,6 +877,80 @@ body {
   transition: transform 0.3s ease;
 }
 
+.custom-footer {
+  background-color: #2E7D73;
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-top {
+  padding: 60px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer-heading {
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.footer-top p {
+  max-width: 1000px;
+  margin: 0 auto 20px auto;
+  line-height: 1.8;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  padding: 30px 0;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFD700;
+}
+
+.copyright {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* Scroll Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ffffff;
+  color: #2E7D73;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.scroll-top:hover {
+  background: #FFD700;
+  color: #000;
+}
+
 
 
 
@@ -1003,7 +1077,13 @@ body {
         to auditory and brain health.
     </p>
 
-    <p class="about-text">
+    
+
+</div>
+
+
+            </div>
+            <p class="about-text">
         ZenCortex is made using a blend of more than 20 carefully selected natural 
         ingredients, including plant extracts, herbs, and minerals known for their 
         antioxidant and circulation-supporting properties. Ingredients like grape seed 
@@ -1029,20 +1109,18 @@ body {
     </p>
 
     <!-- FEATURES -->
+    
     <div class="about-features">
         <div><i class="bi bi-check-lg"></i> Plant Ingredients</div>
         <div><i class="bi bi-check-lg"></i> No Stimulants</div>
         <div><i class="bi bi-check-lg"></i> Non-Habit Forming</div>
     </div>
-
+    
+    <div class="text-center">
     <a href="#" class="about-btn">
         ORDER NOW
     </a>
-
-</div>
-
-
-            </div>
+    </div>
         </div>
     </div>
 </section>
@@ -1619,6 +1697,46 @@ body {
     </div>
   </div>
 </section>
+<footer class="custom-footer">
+
+  <!-- FDA Compliance -->
+  <div class="footer-top text-center">
+    <div class="container">
+      <h5 class="footer-heading">FDA Compliance</h5>
+
+      <p>
+        The information shared on this page is intended for general educational use only and should not be considered medical advice. These statements have not been reviewed or approved by the Food and Drug Administration (FDA) and are not meant to diagnose, treat, cure, or prevent any medical condition. Always consult a qualified healthcare provider before using any supplement or making changes to your diet, exercise, or wellness routine. Results may differ from person to person.
+      </p>
+
+      <p>
+        This website may include references to third-party products, brands, or trademarks, which do not imply endorsement or affiliation. Some links may be affiliate links, meaning we may earn a commission if you choose to make a purchase, at no additional cost to you.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="footer-bottom text-center">
+    <div class="container">
+
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <p class="copyright">
+        © Copyright 2025 ZenCortex. All Rights Reserved.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+</footer>
 
 
 
